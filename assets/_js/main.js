@@ -1,9 +1,23 @@
-'use strict';
+var angular = require('angular')
+var ngRoute = require('angular-route')
+var Components = require('./components')
+var Services = require('./services')
 
-global.jQuery = require('jquery');
-global.$ = jQuery;
-
-var app = require('./app.js');
-var api = 'http://api.wp-app.org/wp-json/wp/v2/posts';
-
-app.init(api);
+angular
+  .module('app', [
+    Components,
+    Services,
+    ngRoute
+  ])
+  .config(['$routeProvider', function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        template: '<app posts="$resolve.posts"></app>',
+        resolve: {
+          posts: ['PostService', function (PostService) {
+            return PostService.getPosts()
+          }]
+        }
+      })
+      .otherwise('/')
+  }])
