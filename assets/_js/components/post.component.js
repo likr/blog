@@ -9,5 +9,5 @@ var PostComponent = {
 
 module.exports = angular
   .module('app.components.post', [])
-  .component('post', PostComponent)
+  .component('wcPost', PostComponent)
   .name

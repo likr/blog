@@ -9,5 +9,5 @@ var AppComponent = {
 
 module.exports = angular
   .module('app.components.app', [])
-  .component('app', AppComponent)
+  .component('wcApp', AppComponent)
   .name
