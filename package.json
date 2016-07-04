@@ -2,14 +2,9 @@
   "name": "node-wp-api",
   "version": "1.0.0",
   "description": "WP API Sample Application",
-  "main": "gulpfile.js",
   "scripts": {
-    "browserify": "gulp browserify",
-    "browsersync": "gulp browsersync",
-    "build": "gulp build",
-    "sass": "gulp sass",
-    "start": "gulp",
-    "watch": "gulp watch"
+    "build": "webpack",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -18,17 +13,8 @@
   "author": "WordCamp Kansai 2016 Organization",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.13.0",
-    "browserify": "^13.0.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^1.5.4",
-    "gulp-watch": "^4.3.8",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.7.0"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
     "angular": "^1.5.7",
