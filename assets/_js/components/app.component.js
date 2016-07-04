@@ -1,9 +1,6 @@
 var angular = require('angular')
 
 var AppComponent = {
-  bindings: {
-    posts: '<'
-  },
   templateUrl: 'assets/html/app.component.html'
 }
 

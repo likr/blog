@@ -12,12 +12,7 @@ angular
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
-        template: '<wc-app posts="$resolve.posts"></wc-app>',
-        resolve: {
-          posts: ['PostService', function (PostService) {
-            return PostService.getPosts()
-          }]
-        }
+        template: '<wc-posts></wc-posts>'
       })
       .otherwise('/')
   }])
