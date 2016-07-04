@@ -56,3 +56,5 @@ doc/
 .DS_Store
 .idea
 .secret
+
+assets/js/bundle.js
