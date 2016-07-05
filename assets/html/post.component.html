@@ -1,4 +1,4 @@
-<li class="post">
-  <h2 class="entry-title">{{$ctrl.post.title.rendered}}</h2>
-  <div class="entry-content" ng-bind-html="$ctrl.post.content.rendered"></div>
+<li ng-class="$ctrl.style.post">
+  <h2 ng-class="$ctrl.style.entryTitle">{{$ctrl.post.title.rendered}}</h2>
+  <div ng-class="$ctrl.style.entryContent" ng-bind-html="$ctrl.post.content.rendered"></div>
 </li>

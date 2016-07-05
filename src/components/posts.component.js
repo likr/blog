@@ -1,7 +1,9 @@
 const angular = require('angular')
+const style = require('./posts.component.css')
 
 class PostsController {
   constructor (PostService) {
+    this.style = style
     this.posts = []
     PostService.getPosts()
       .then((posts) => {

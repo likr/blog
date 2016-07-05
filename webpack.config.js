@@ -12,6 +12,10 @@ module.exports = {
         query: {
           presets: ['es2015']
         }
+      },
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css?modules']
       }
     ]
   },
