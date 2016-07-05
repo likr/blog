@@ -1,6 +1,6 @@
-var angular = require('angular')
+const angular = require('angular')
 
-var PostComponent = {
+const PostComponent = {
   bindings: {
     post: '<'
   },

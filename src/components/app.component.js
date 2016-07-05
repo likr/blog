@@ -1,6 +1,6 @@
-var angular = require('angular')
+const angular = require('angular')
 
-var AppComponent = {
+const AppComponent = {
   templateUrl: 'assets/html/app.component.html'
 }
 

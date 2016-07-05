@@ -1,7 +1,7 @@
-var angular = require('angular')
-var ngRoute = require('angular-route')
-var Components = require('./components')
-var Services = require('./services')
+const angular = require('angular')
+const ngRoute = require('angular-route')
+const Components = require('./components')
+const Services = require('./services')
 
 angular
   .module('app', [
@@ -9,7 +9,7 @@ angular
     Services,
     ngRoute
   ])
-  .config(['$routeProvider', function ($routeProvider) {
+  .config(['$routeProvider', ($routeProvider) => {
     $routeProvider
       .when('/', {
         template: '<wc-posts></wc-posts>'

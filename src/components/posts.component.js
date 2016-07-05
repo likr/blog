@@ -1,14 +1,19 @@
-var angular = require('angular')
+const angular = require('angular')
 
-var PostsComponent = {
-  controller: ['PostService', function (PostService) {
+class PostsController {
+  constructor (PostService) {
     this.posts = []
-    var that = this
     PostService.getPosts()
-      .then(function (posts) {
-        that.posts = posts
+      .then((posts) => {
+        this.posts = posts
       })
-  }],
+  }
+}
+
+PostsController.$inject = ['PostService']
+
+const PostsComponent = {
+  controller: PostsController,
   templateUrl: 'assets/html/posts.component.html'
 }
 
