@@ -13,6 +13,8 @@
   "author": "WordCamp Kansai 2016 Organization",
   "license": "MIT",
   "devDependencies": {
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
