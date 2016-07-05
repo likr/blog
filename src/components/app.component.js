@@ -1,4 +1,5 @@
 const angular = require('angular')
+const template = require('./app.component.html')
 const style = require('./app.component.css')
 
 class AppController {
@@ -9,7 +10,7 @@ class AppController {
 
 const AppComponent = {
   controller: AppController,
-  templateUrl: 'assets/html/app.component.html'
+  template
 }
 
 module.exports = angular

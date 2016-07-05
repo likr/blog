@@ -1,4 +1,5 @@
 const angular = require('angular')
+const template = require('./posts.component.html')
 const style = require('./posts.component.css')
 
 class PostsController {
@@ -16,7 +17,7 @@ PostsController.$inject = ['PostService']
 
 const PostsComponent = {
   controller: PostsController,
-  templateUrl: 'assets/html/posts.component.html'
+  template
 }
 
 module.exports = angular

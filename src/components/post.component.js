@@ -1,4 +1,5 @@
 const angular = require('angular')
+const template = require('./post.component.html')
 const style = require('./post.component.css')
 
 class PostController {
@@ -12,7 +13,7 @@ const PostComponent = {
     post: '<'
   },
   controller: PostController,
-  templateUrl: './assets/html/post.component.html'
+  template
 }
 
 module.exports = angular
