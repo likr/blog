@@ -151,10 +151,10 @@ class WpService {
         if (sequence) {
           return {
             data: response.data,
-            page: options.page || defaultPage,
-            perPage: options.per_page || defaultPerPage,
-            total: response.headers('x-wp-total'),
-            totalPages: response.headers('x-wp-totalpages')
+            page: +options.page || defaultPage,
+            perPage: +options.per_page || defaultPerPage,
+            total: +response.headers('x-wp-total'),
+            totalPages: +response.headers('x-wp-totalpages')
           }
         } else {
           return response.data
@@ -188,6 +188,9 @@ class WpService {
 
   resolveAuthors (posts) {
     const ids = Array.from(new Set(posts.map((post) => post.author)))
+    if (ids.length === 0) {
+      return
+    }
     return this.getUsers({per_page: ids.length, include: ids.join(',')})
       .then((users) => {
         const userMap = makeMap(users.data, 'id')
@@ -199,6 +202,9 @@ class WpService {
 
   resolveCategories (posts) {
     const ids = uniqueIds(posts, 'categories')
+    if (ids.length === 0) {
+      return
+    }
     return this.getCategories({per_page: ids.length, include: ids.join(',')})
       .then((categories) => {
         const categoryMap = makeMap(categories.data, 'id')
@@ -210,6 +216,9 @@ class WpService {
 
   resolveTags (posts) {
     const ids = uniqueIds(posts, 'tags')
+    if (ids.length === 0) {
+      return
+    }
     return this.getTags({per_page: ids.length, include: ids.join(',')})
       .then((tags) => {
         const tagMap = makeMap(tags.data, 'id')
