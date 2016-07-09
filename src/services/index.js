@@ -1,8 +1,8 @@
 const angular = require('angular')
-const PostService = require('./post.service')
+const WpService = require('./wp.service')
 
 module.exports = angular
   .module('app.services', [
-    PostService
+    WpService
   ])
   .name

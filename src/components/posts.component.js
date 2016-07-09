@@ -3,17 +3,36 @@ const template = require('./posts.component.html')
 const style = require('./posts.component.css')
 
 class PostsController {
-  constructor (PostService) {
+  constructor ($routeParams, WpService) {
     this.style = style
     this.posts = []
-    PostService.getPosts()
+    WpService
+      .getPosts({
+        context: 'view',
+        page: $routeParams.page || 1,
+        per_page: 10,
+        // search: '',
+        // author: '',
+        // exclude: '',
+        // include: '',
+        order: 'desc',
+        orderBy: 'date',
+        status: 'publish',
+        filter: '',
+        includeAuthors: true,
+        includeCategories: true,
+        includeTags: true
+      })
       .then((posts) => {
-        this.posts = posts
+        console.log(posts)
+        this.page = posts.page
+        this.totalPages = posts.totalPages
+        this.posts = posts.data
       })
   }
 }
 
-PostsController.$inject = ['PostService']
+PostsController.$inject = ['$routeParams', 'WpService']
 
 const PostsComponent = {
   controller: PostsController,
