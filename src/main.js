@@ -11,8 +11,11 @@ angular
   ])
   .config(['$routeProvider', ($routeProvider) => {
     $routeProvider
-      .when('/', {
+      .when('/posts', {
         template: '<wp-post-list></wp-post-list>'
       })
-      .otherwise('/')
+      .when('/posts/:id', {
+        template: '<wp-post-detail></wp-post-detail>'
+      })
+      .otherwise('/posts')
   }])
