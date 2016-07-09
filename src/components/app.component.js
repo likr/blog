@@ -15,5 +15,5 @@ const AppComponent = {
 
 module.exports = angular
   .module('app.components.app', [])
-  .component('wcApp', AppComponent)
+  .component('wpApp', AppComponent)
   .name

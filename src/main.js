@@ -12,7 +12,7 @@ angular
   .config(['$routeProvider', ($routeProvider) => {
     $routeProvider
       .when('/', {
-        template: '<wc-posts></wc-posts>'
+        template: '<wp-post-list></wp-post-list>'
       })
       .otherwise('/')
   }])

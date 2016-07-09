@@ -18,5 +18,5 @@ const PostComponent = {
 
 module.exports = angular
   .module('app.components.post', [])
-  .component('wcPost', PostComponent)
+  .component('wpPost', PostComponent)
   .name
