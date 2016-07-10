@@ -1,10 +1,28 @@
-<h1 ng-class="$ctrl.style.appTitle">WP API Sample Application</h1>
-
-<p>{{$ctrl.page}} / {{$ctrl.totalPages}} page</p>
-
-<ul ng-class="$ctrl.style.postList">
-  <li ng-class="$ctrl.style.post" ng-repeat="post in $ctrl.posts">
-    <h2 ng-class="$ctrl.style.entryTitle" ng-bind-html="post.title.rendered"></h2>
-    <div ng-class="$ctrl.style.entryContent" ng-bind-html="post.excerpt.rendered"></div>
-  </li>
-</ul>
+<div ng-class="$ctrl.style.posts">
+  <h1 ng-class="$ctrl.style.contentSubhead">Recent Posts</h1>
+  <section ng-class="$ctrl.style.post" ng-repeat="post in $ctrl.posts">
+    <header ng-class="$ctrl.style.postHeader">
+      <img ng-class="$ctrl.style.postAvatar" alt="{{post.author.name}}&#x27;s avatar" height="48" width="48" ng-src="{{post.author.avatar_urls['48']}}">
+      <h2 ng-class="$ctrl.style.postTitle">
+        <a ng-href="#/posts/{{post.id}}" ng-bind-html="post.title.rendered"></a>
+      </h2>
+      <p ng-class="$ctrl.style.postMeta">
+        By <a ng-class="$ctrl.style.postAuthor" ng-href="{{post.author.link}}">{{post.author.name}}</a> under
+        <a ng-class="$ctrl.style.postCategory" ng-href="{{category.link}}" ng-repeat="category in post.categories">{{category.name}}</a>
+      </p>
+    </header>
+    <div ng-class="$ctrl.style.postDescription" ng-bind-html="post.excerpt.rendered"></div>
+  </section>
+  <div ng-class="$ctrl.style.pagination">
+    <div class="pure-menu pure-menu-horizontal">
+      <ul>
+        <li class="pure-menu-item">
+          <a ng-disabled="$ctrl.page <= 1" ng-href="{{$ctrl.page === 1 ? '' : '#/posts?page=' + ($ctrl.page - 1)}}" class="pure-menu-link">Prev</a>
+        </li>
+        <li class="pure-menu-item">
+          <a ng-disabled="$ctrl.page >= $ctrl.totalPages" ng-href="{{$ctrl.page === $ctrl.totalPages ? '' : '#/posts?page=' + ($ctrl.page + 1)}}" class="pure-menu-link">Next</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

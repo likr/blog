@@ -1,4 +1,11 @@
-<li ng-class="$ctrl.style.post">
-  <h2 ng-class="$ctrl.style.entryTitle" ng-bind-html="$ctrl.post.title.rendered"></h2>
-  <div ng-class="$ctrl.style.entryContent" ng-bind-html="$ctrl.post.content.rendered"></div>
-</li>
+<section ng-class="$ctrl.style.post">
+  <header ng-class="$ctrl.style.postHeader">
+    <img ng-class="$ctrl.style.postAvatar" alt="{{$ctrl.post.author.name}}&#x27;s avatar" height="48" width="48" ng-src="{{$ctrl.post.author.avatar_urls['48']}}">
+    <h2 ng-class="$ctrl.style.postTitle" ng-bind-html="$ctrl.post.title.rendered"></h2>
+    <p ng-class="$ctrl.style.postMeta">
+      By <a ng-class="$ctrl.style.postAuthor" ng-href="{{$ctrl.post.author.link}}">{{$ctrl.post.author.name}}</a> under
+      <a ng-class="$ctrl.style.postCategory" ng-href="{{category.link}}" ng-repeat="category in $ctrl.post.categories">{{category.name}}</a>
+    </p>
+  </header>
+  <div ng-class="$ctrl.style.postDescription" ng-bind-html="$ctrl.post.content.rendered"></div>
+</section>

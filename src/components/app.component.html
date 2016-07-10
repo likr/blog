@@ -1,1 +1,36 @@
-<ng-view></ng-view>
+<div ng-class="$ctrl.style.layout" class="pure-g">
+  <div ng-class="$ctrl.style.sidebar" class="pure-u-1 pure-u-md-1-4">
+    <div ng-class="$ctrl.style.header">
+      <h1 ng-class="$ctrl.style.brandTitle">WP API Sample Application</h1>
+      <h2 ng-class="$ctrl.style.brandTagline">Creating a blog layout using Pure</h2>
+      <nav ng-class="$ctrl.style.nav">
+        <ul ng-class="$ctrl.style.navList">
+          <li ng-class="$ctrl.style.navItem">
+            <a class="pure-button" href="http://purecss.io">Pure</a>
+          </li>
+          <li ng-class="$ctrl.style.navItem">
+            <a class="pure-button" href="http://yuilibrary.com">YUI Library</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div ng-class="$ctrl.style.content" class="pure-u-1 pure-u-md-3-4">
+    <ng-view></ng-view>
+    <div ng-class="$ctrl.style.footer">
+      <div class="pure-menu pure-menu-horizontal">
+        <ul>
+          <li class="pure-menu-item">
+            <a href="http://purecss.io/" class="pure-menu-link">About</a>
+          </li>
+          <li class="pure-menu-item">
+            <a href="http://twitter.com/yuilibrary/" class="pure-menu-link">Twitter</a>
+          </li>
+          <li class="pure-menu-item">
+            <a href="http://github.com/yahoo/pure/" class="pure-menu-link">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
