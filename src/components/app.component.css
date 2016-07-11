@@ -3,17 +3,14 @@
 }
 
 .header {
-  top: auto;
-  margin: 80% 2em 0;
-  text-align: right;
+    text-align: center;
+    top: auto;
+    margin: 3em auto;
 }
 
 .sidebar {
   background: rgb(61, 79, 93);
   color: #fff;
-  position: fixed;
-  top: 0;
-  bottom: 0;
 }
 
 .brandTitle, .brandTagline {
@@ -57,8 +54,7 @@
 }
 
 .content {
-  padding: 2em 3em 0;
-  margin-left: 25%;
+    padding: 2em 1em 0;
 }
 
 .footer {
@@ -73,4 +69,22 @@
 
 .footer :global(.pure-menu) a:hover, .footer :global(.pure-menu) a:focus {
   background: none;
+}
+
+@media (min-width: 48em) {
+    .content {
+        padding: 2em 3em 0;
+        margin-left: 25%;
+    }
+
+    .header {
+        margin: 80% 2em 0;
+        text-align: right;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
 }
