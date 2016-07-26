@@ -1,3 +1,5 @@
+require('./service-worker-registration')
+
 const angular = require('angular')
 const ngRoute = require('angular-route')
 const Components = require('./components')
