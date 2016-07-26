@@ -1,9 +1,10 @@
 {
   "maximumFileSizeToCacheInBytes": 10000000,
   "staticFileGlobs": [
-    "index.html",
-    "assets/**/*.*"
+    "public/index.html",
+    "public/assets/**/*.*"
   ],
+  "stripPrefix": "public/",
   "runtimeCaching": [
     {
       "urlPattern": "/https:\\/\\/cdnjs\\.cloudflare\\.com\\/ajax\\/libs\\/pure/",
