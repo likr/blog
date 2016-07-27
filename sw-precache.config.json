@@ -2,7 +2,7 @@
   "maximumFileSizeToCacheInBytes": 10000000,
   "staticFileGlobs": [
     "public/index.html",
-    "public/assets/**/*.*"
+    "public/assets/{js,css}/*.*"
   ],
   "stripPrefix": "public/",
   "runtimeCaching": [
