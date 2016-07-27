@@ -83,7 +83,7 @@ function parse(e){for(var t,r=[],n=0,o=0,a="";null!=(t=PATH_REGEXP.exec(e));){va
 
 
 /* eslint-disable quotes, comma-spacing */
-var PrecacheConfig = [["assets/css/style.css","9794d429e10d3211f9eb9c8d10bade24"],["assets/js/bundle.js","2978170fe78553162de5f4b70ce58381"],["index.html","b270c04f96900fb1f80a4233c690002a"]];
+var PrecacheConfig = [["assets/css/style.css","9794d429e10d3211f9eb9c8d10bade24"],["assets/js/bundle.js","2978170fe78553162de5f4b70ce58381"],["index.html","5e05b630acba6bb8cf7fc8734950c7db"]];
 /* eslint-enable quotes, comma-spacing */
 var CacheNamePrefix = 'sw-precache-v1-sw-precache-' + (self.registration ? self.registration.scope : '') + '-';
 
