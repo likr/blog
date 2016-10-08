@@ -1,0 +1,11 @@
+<section class="post" *ngIf="post">
+  <header class="postHeader">
+    <img class="postAvatar" alt="{{post.author.name}}&#x27;s avatar" height="48" width="48" [src]="post.author.avatar_urls['48']">
+    <h2 class="postTitle" [innerHtml]="post.title.rendered"></h2>
+    <p class="postMeta">
+      By <a class="postAuthor" href="{{post.author.link}}">{{post.author.name}}</a> under
+      <a class="postCategory" href="{{category.link}}" *ngFor="let category of post.categories">{{category.name}}</a>
+    </p>
+  </header>
+  <div class="postDescription" [innerHtml]="post.content.rendered"></div>
+</section>
