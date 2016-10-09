@@ -4,6 +4,9 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
+    "sw-precache": "sw-precache --root=dist --config=sw-precache.config.json --verbose",
+    "build": "ng build --prod",
+    "deploy": "npm run build && npm run sw-precache && ng github-pages:deploy --message update",
     "start": "ng serve",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
@@ -38,6 +41,7 @@
     "karma-jasmine": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
     "protractor": "4.0.9",
+    "sw-precache": "^4.1.0",
     "ts-node": "1.2.1",
     "tslint": "3.13.0",
     "typescript": "2.0.2"
