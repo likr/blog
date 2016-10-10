@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My project boilerplate for React.js",
   "scripts": {
-    "deploy": "npm run build && gh-pages -d public",
+    "deploy": "NODE_ENV=production npm run build && gh-pages -d public",
     "start": "webpack-dev-server --content-base public",
     "build": "webpack"
   },
@@ -31,6 +31,7 @@
     "css-loader": "^0.25.0",
     "gh-pages": "^0.11.0",
     "style-loader": "^0.13.1",
+    "sw-precache-webpack-plugin": "^0.5.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
   }

@@ -5,7 +5,7 @@ export const App = ({children}) => {
   return <div className={`pure-g ${styles.layout}`}>
     <div className={`pure-u-1 pure-u-md-1-4 ${styles.sidebar}`}>
       <div className={styles.header}>
-        <h1 className={styles.brandTitle}>WP API Sample Application</h1>
+        <h1 className={styles.brandTitle}>likr's blog</h1>
         <h2 className={styles.brandTagline}>Creating a blog using Angular</h2>
         <nav>
           <ul className={styles.navList}>
