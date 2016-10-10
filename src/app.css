@@ -3,9 +3,9 @@
 }
 
 .header {
-    text-align: center;
-    top: auto;
-    margin: 3em auto;
+  text-align: center;
+  top: auto;
+  margin: 3em auto;
 }
 
 .sidebar {
@@ -34,7 +34,7 @@
 
 .navItem {
   display: inline-block;
-  *display: inline;
+  display: inline;
   zoom: 1;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .content {
-    padding: 2em 1em 0;
+  padding: 2em 1em 0;
 }
 
 .footer {
@@ -72,19 +72,19 @@
 }
 
 @media (min-width: 48em) {
-    .content {
-        padding: 2em 3em 0;
-        margin-left: 25%;
-    }
+  .content {
+    padding: 2em 3em 0;
+    margin-left: 25%;
+  }
 
-    .header {
-        margin: 80% 2em 0;
-        text-align: right;
-    }
+  .header {
+    margin: 80% 2em 0;
+    text-align: right;
+  }
 
-    .sidebar {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-    }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
 }
