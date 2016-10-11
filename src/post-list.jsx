@@ -42,9 +42,7 @@ export class PostList extends React.Component {
       })}
       <div className={styles.pagination}>
         <div className='pure-menu pure-menu-horizontal'>
-          <ul>
-            <li />
-          </ul>
+          <ul />
         </div>
       </div>
     </div>

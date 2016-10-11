@@ -27,50 +27,47 @@ const options = {
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
-  }
-}
-
-if (process.env.NODE_ENV === 'production') {
-  Object.assign(options, {
-    plugins: [
-      new SWPrecacheWebpackPlugin({
-        maximumFileSizeToCacheInBytes: 10000000,
-        staticFileGlobs: [
-          'public/index.html',
-          'public/bundle.js',
-          'public/styles.css',
-          'public/icon128.png',
-          'public/manifest.json'
-        ],
-        stripPrefix: 'public/',
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/pure/,
-            handler: 'networkFirst'
-          },
-          {
-            urlPattern: /https:\/\/public-api\.wordpress\.com\/rest\/v1\.1\/sites\/ylikr\.wordpress\.com\/posts/,
-            handler: 'networkFirst',
-            options: {
-              cache: {
-                name: 'posts'
-              }
-            }
-          },
-          {
-            urlPattern: /https:\/\/0\.gravatar\.com\/avatar/,
-            handler: 'networkFirst',
-            options: {
-              cache: {
-                name: 'avatars'
-              }
+  },
+  plugins: [
+    new SWPrecacheWebpackPlugin({
+      maximumFileSizeToCacheInBytes: 10000000,
+      staticFileGlobs: [
+        'public/index.html',
+        'public/bundle.js',
+        'public/styles.css',
+        'public/icon128.png',
+        'public/manifest.json'
+      ],
+      stripPrefix: 'public/',
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/pure/,
+          handler: 'networkFirst'
+        },
+        {
+          urlPattern: /https:\/\/public-api\.wordpress\.com\/rest\/v1\.1\/sites\/ylikr\.wordpress\.com\/posts/,
+          handler: 'networkFirst',
+          options: {
+            cache: {
+              name: 'posts'
             }
           }
-        ]
-      })
-    ]
-  })
-} else {
+        },
+        {
+          urlPattern: /https:\/\/0\.gravatar\.com\/avatar/,
+          handler: 'networkFirst',
+          options: {
+            cache: {
+              name: 'avatars'
+            }
+          }
+        }
+      ]
+    })
+  ]
+}
+
+if (process.env.NODE_ENV !== 'production') {
   Object.assign(options, {
     devtool: 'inline-source-map'
   })

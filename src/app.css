@@ -21,6 +21,10 @@
   text-transform: uppercase;
 }
 
+.brandTitle a {
+  color: white;
+}
+
 .brandTagline {
   font-weight: 300;
   color: rgb(176, 202, 219);

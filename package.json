@@ -5,6 +5,7 @@
   "scripts": {
     "deploy": "NODE_ENV=production npm run build && gh-pages -d public",
     "start": "webpack-dev-server --content-base public",
+    "watch": "webpack --watch",
     "build": "webpack"
   },
   "repository": {
