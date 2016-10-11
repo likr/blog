@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router'
 import {getPosts} from './wp'
+import {Head} from './head'
 import styles from './post-list.css'
 
 export class PostList extends React.Component {
@@ -22,6 +23,7 @@ export class PostList extends React.Component {
   render () {
     const {posts} = this.state
     return <div className={styles.posts}>
+      <Head />
       <h1 className={styles.contentSubhead}>Recent Posts</h1>
       {posts.map((post) => {
         return <section key={post.ID} className={styles.post}>

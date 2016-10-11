@@ -1,5 +1,6 @@
 import React from 'react'
 import {getPost} from './wp'
+import {Head} from './head'
 import styles from './post-detail.css'
 
 export class PostDetail extends React.Component {
@@ -24,6 +25,7 @@ export class PostDetail extends React.Component {
       return <div />
     }
     return <section className={styles.post}>
+      <Head subTitle={post.title} />
       <header className={styles.postHeader}>
         <img className={styles.postAvatar} alt={`${post.author.name}'s avatar`} height='48' width='48' src={post.author.avatar_URL} />
         <h2 className={styles.postTitle} dangerouslySetInnerHTML={{__html: post.title}} />
