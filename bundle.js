@@ -27142,6 +27142,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(173);
+
 	var _app = __webpack_require__(237);
 
 	var _app2 = _interopRequireDefault(_app);
@@ -27163,12 +27165,16 @@
 	        _react2.default.createElement(
 	          'h1',
 	          { className: _app2.default.brandTitle },
-	          'likr\'s blog'
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/posts' },
+	            'likr\'s blog'
+	          )
 	        ),
 	        _react2.default.createElement(
 	          'h2',
 	          { className: _app2.default.brandTagline },
-	          'Creating a blog using Angular'
+	          'blog using WP.com API'
 	        ),
 	        _react2.default.createElement(
 	          'nav',
@@ -27181,8 +27187,8 @@
 	              { className: _app2.default.navItem },
 	              _react2.default.createElement(
 	                'a',
-	                { className: 'pure-button', href: 'http://v2.wp-api.org' },
-	                'WP API'
+	                { className: 'pure-button', href: 'https://developer.wordpress.com/docs/api/' },
+	                'WP.com API'
 	              )
 	            ),
 	            ' ',
@@ -27191,8 +27197,8 @@
 	              { className: _app2.default.navItem },
 	              _react2.default.createElement(
 	                'a',
-	                { className: 'pure-button', href: 'https://angularjs.org/' },
-	                'Angular'
+	                { className: 'pure-button', href: 'https://facebook.github.io/react/' },
+	                'React'
 	              )
 	            )
 	          )
@@ -27235,7 +27241,7 @@
 	              { className: 'pure-menu-item' },
 	              _react2.default.createElement(
 	                'a',
-	                { href: 'http://github.com/likr/wpapi-angular-example/', className: 'pure-menu-link' },
+	                { href: 'http://github.com/likr/blog', className: 'pure-menu-link' },
 	                'GitHub'
 	              )
 	            )
@@ -27281,7 +27287,7 @@
 
 
 	// module
-	exports.push([module.id, ".src-app---layout---1NuH8 {\n  padding: 0;\n}\n\n.src-app---header---23TPT {\n  text-align: center;\n  top: auto;\n  margin: 3em auto;\n}\n\n.src-app---sidebar---1GNsE {\n  background: rgb(61, 79, 93);\n  color: #fff;\n}\n\n.src-app---brandTitle---24NCD, .src-app---brandTagline---1L0c9 {\n  margin: 0;\n}\n\n.src-app---brandTitle---24NCD {\n  text-transform: uppercase;\n}\n\n.src-app---brandTagline---1L0c9 {\n  font-weight: 300;\n  color: rgb(176, 202, 219);\n}\n\n.src-app---navList---hM_RG {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n\n.src-app---navItem---JTvOd {\n  display: inline-block;\n  display: inline;\n  zoom: 1;\n}\n\n.src-app---navItem---JTvOd a {\n  background: transparent;\n  border: 2px solid rgb(176, 202, 219);\n  color: #fff;\n  margin-top: 1em;\n  letter-spacing: 0.05em;\n  text-transform: uppercase;\n  font-size: 85%;\n}\n\n.src-app---navItem---JTvOd a:hover, .src-app---navItem---JTvOd a:focus {\n  border: 2px solid rgb(61, 146, 201);\n  text-decoration: none;\n}\n\n.src-app---content---37dfQ {\n  padding: 2em 1em 0;\n}\n\n.src-app---footer---3EQjP {\n  text-align: center;\n  padding: 1em 0;\n}\n\n.src-app---footer---3EQjP a {\n  color: #ccc;\n  font-size: 80%;\n}\n\n.src-app---footer---3EQjP .pure-menu a:hover, .src-app---footer---3EQjP .pure-menu a:focus {\n  background: none;\n}\n\n@media (min-width: 48em) {\n  .src-app---content---37dfQ {\n    padding: 2em 3em 0;\n    margin-left: 25%;\n  }\n\n  .src-app---header---23TPT {\n    margin: 80% 2em 0;\n    text-align: right;\n  }\n\n  .src-app---sidebar---1GNsE {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n  }\n}\n", ""]);
+	exports.push([module.id, ".src-app---layout---1NuH8 {\n  padding: 0;\n}\n\n.src-app---header---23TPT {\n  text-align: center;\n  top: auto;\n  margin: 3em auto;\n}\n\n.src-app---sidebar---1GNsE {\n  background: rgb(61, 79, 93);\n  color: #fff;\n}\n\n.src-app---brandTitle---24NCD, .src-app---brandTagline---1L0c9 {\n  margin: 0;\n}\n\n.src-app---brandTitle---24NCD {\n  text-transform: uppercase;\n}\n\n.src-app---brandTitle---24NCD a {\n  color: white;\n}\n\n.src-app---brandTagline---1L0c9 {\n  font-weight: 300;\n  color: rgb(176, 202, 219);\n}\n\n.src-app---navList---hM_RG {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n\n.src-app---navItem---JTvOd {\n  display: inline-block;\n  display: inline;\n  zoom: 1;\n}\n\n.src-app---navItem---JTvOd a {\n  background: transparent;\n  border: 2px solid rgb(176, 202, 219);\n  color: #fff;\n  margin-top: 1em;\n  letter-spacing: 0.05em;\n  text-transform: uppercase;\n  font-size: 85%;\n}\n\n.src-app---navItem---JTvOd a:hover, .src-app---navItem---JTvOd a:focus {\n  border: 2px solid rgb(61, 146, 201);\n  text-decoration: none;\n}\n\n.src-app---content---37dfQ {\n  padding: 2em 1em 0;\n}\n\n.src-app---footer---3EQjP {\n  text-align: center;\n  padding: 1em 0;\n}\n\n.src-app---footer---3EQjP a {\n  color: #ccc;\n  font-size: 80%;\n}\n\n.src-app---footer---3EQjP .pure-menu a:hover, .src-app---footer---3EQjP .pure-menu a:focus {\n  background: none;\n}\n\n@media (min-width: 48em) {\n  .src-app---content---37dfQ {\n    padding: 2em 3em 0;\n    margin-left: 25%;\n  }\n\n  .src-app---header---23TPT {\n    margin: 80% 2em 0;\n    text-align: right;\n  }\n\n  .src-app---sidebar---1GNsE {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n  }\n}\n", ""]);
 
 	// exports
 	exports.locals = {
@@ -27719,11 +27725,7 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'pure-menu pure-menu-horizontal' },
-	            _react2.default.createElement(
-	              'ul',
-	              null,
-	              _react2.default.createElement('li', null)
-	            )
+	            _react2.default.createElement('ul', null)
 	          )
 	        )
 	      );
