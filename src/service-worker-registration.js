@@ -1,6 +1,6 @@
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
-    .register('service-worker.js')
+    .register('/service-worker.js')
     .then((reg) => {
       reg.onupdatefound = () => {
         const installingWorker = reg.installing

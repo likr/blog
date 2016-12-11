@@ -39,6 +39,7 @@ const options = {
         'public/manifest.json'
       ],
       stripPrefix: 'public/',
+      navigateFallback: '/index.html',
       runtimeCaching: [
         {
           urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/pure/,
