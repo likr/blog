@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router'
 import {getPosts} from './wp'
+import {renderered} from './prerender'
 import {Head} from './head'
 import styles from './post-list.css'
 
@@ -16,6 +17,8 @@ export class PostList extends React.Component {
     getPosts().then(({posts}) => {
       this.setState({
         posts
+      }, () => {
+        renderered()
       })
     })
   }

@@ -1,5 +1,6 @@
 import React from 'react'
 import {getPost} from './wp'
+import {renderered} from './prerender'
 import {Head} from './head'
 import styles from './post-detail.css'
 
@@ -15,6 +16,8 @@ export class PostDetail extends React.Component {
     getPost(this.props.params.postId).then((post) => {
       this.setState({
         post
+      }, () => {
+        renderered()
       })
     })
   }

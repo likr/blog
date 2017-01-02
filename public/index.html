@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="fragment" content="!">
     <title>likr's blog</title>
     <link rel="icon" type="image/x-icon" href="/icon128.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
@@ -20,6 +21,14 @@ ga('send', 'pageview');
   </head>
   <body>
     <div id="content"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js"></script>
+    <script>
+      if (!window.Promise) {
+        window.Promise = ES6Promise.Promise
+      }
+      window.prerenderReady = false
+    </script>
     <script src="/bundle.js"></script>
   </body>
 </html>
