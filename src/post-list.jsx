@@ -26,7 +26,7 @@ export class PostList extends React.Component {
   render () {
     const {posts} = this.state
     return <div className={styles.posts}>
-      <Head />
+      <Head subTitle='Recent Posts' />
       <h1 className={styles.contentSubhead}>Recent Posts</h1>
       {posts.map((post) => {
         return <section key={post.ID} className={styles.post}>
