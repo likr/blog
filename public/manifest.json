@@ -3,12 +3,12 @@
   "name": "likr's blog",
   "icons": [
     {
-      "src": "assets/images/icon128.png",
+      "src": "icon128.png",
       "sizes": "192x192",
       "type": "image/png"
     }
   ],
-  "start_url": "/blog/",
+  "start_url": "/",
   "background_color": "#fff",
   "theme_color": "#3d4f5d",
   "display": "standalone"
