@@ -34,63 +34,62 @@ const options = {
     'react-dom': 'ReactDOM',
     'react-router': 'ReactRouter'
   },
-  plugins: [
-    new SWPrecacheWebpackPlugin({
-      maximumFileSizeToCacheInBytes: 10000000,
-      staticFileGlobs: [
-        'public/index.html',
-        'public/bundle.js',
-        'public/styles.css',
-        'public/icon128.png',
-        'public/manifest.json'
-      ],
-      stripPrefix: 'public/',
-      navigateFallback: '/index.html',
-      runtimeCaching: [
-        {
-          urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/pure/,
-          handler: 'networkFirst'
-        },
-        {
-          urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/react/,
-          handler: 'networkFirst'
-        },
-        {
-          urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/react-router/,
-          handler: 'networkFirst'
-        },
-        {
-          urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/es6-promise/,
-          handler: 'networkFirst'
-        },
-        {
-          urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/fetch/,
-          handler: 'networkFirst'
-        },
-        {
-          urlPattern: /https:\/\/public-api\.wordpress\.com\/rest\/v1\.1\/sites\/ylikr\.wordpress\.com\/posts/,
-          handler: 'networkFirst',
-          options: {
-            cache: {
-              name: 'posts'
-            }
-          }
-        },
-        {
-          urlPattern: /https:\/\/0\.gravatar\.com\/avatar/,
-          handler: 'networkFirst',
-          options: {
-            cache: {
-              name: 'avatars'
-            }
-          }
-        }
-      ]
-    })
-  ]
+  plugins: []
 }
 
 if (process.env.NODE_ENV === 'production') {
+  options.plugins.push(new SWPrecacheWebpackPlugin({
+    maximumFileSizeToCacheInBytes: 10000000,
+    staticFileGlobs: [
+      'public/index.html',
+      'public/bundle.js',
+      'public/styles.css',
+      'public/icon128.png',
+      'public/manifest.json'
+    ],
+    stripPrefix: 'public/',
+    navigateFallback: '/index.html',
+    runtimeCaching: [
+      {
+        urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/pure/,
+        handler: 'networkFirst'
+      },
+      {
+        urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/react/,
+        handler: 'networkFirst'
+      },
+      {
+        urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/react-router/,
+        handler: 'networkFirst'
+      },
+      {
+        urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/es6-promise/,
+        handler: 'networkFirst'
+      },
+      {
+        urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/fetch/,
+        handler: 'networkFirst'
+      },
+      {
+        urlPattern: /https:\/\/public-api\.wordpress\.com\/rest\/v1\.1\/sites\/ylikr\.wordpress\.com\/posts/,
+        handler: 'networkFirst',
+        options: {
+          cache: {
+            name: 'posts'
+          }
+        }
+      },
+      {
+        urlPattern: /https:\/\/0\.gravatar\.com\/avatar/,
+        handler: 'networkFirst',
+        options: {
+          cache: {
+            name: 'avatars'
+          }
+        }
+      }
+    ]
+  }))
   options.plugins.push(new webpack.optimize.UglifyJsPlugin({
     compress: {
       warnings: false
