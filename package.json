@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My project boilerplate for React.js",
   "scripts": {
-    "deploy": "NODE_ENV=production npm run build && firebase deploy",
+    "deploy": "NODE_ENV=production npm run build && netlify deploy",
     "start": "webpack-dev-server --content-base public --history-api-fallback",
     "watch": "webpack --watch",
     "build": "webpack"
@@ -31,7 +31,6 @@
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "css-loader": "^0.25.0",
-    "firebase-tools": "^3.2.0",
     "netlify-cli": "^1.2.2",
     "style-loader": "^0.13.1",
     "sw-precache-webpack-plugin": "^0.6.3",
