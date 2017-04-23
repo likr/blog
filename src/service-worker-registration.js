@@ -1,4 +1,6 @@
-if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+/* global USE_SERVICE_WORKER */
+
+if (USE_SERVICE_WORKER && 'serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('/service-worker.js')
     .then((reg) => {

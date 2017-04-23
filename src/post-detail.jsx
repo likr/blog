@@ -28,7 +28,7 @@ export class PostDetail extends React.Component {
       return <div />
     }
     return <section className={styles.post}>
-      <Head subTitle={post.title} />
+      <Head subTitle={post.title.rendered} />
       <header className={styles.postHeader}>
         <h2 className={styles.postTitle} dangerouslySetInnerHTML={{__html: post.title.rendered}} />
         <p className={styles.postMeta}>

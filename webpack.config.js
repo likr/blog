@@ -34,7 +34,11 @@ const options = {
     'react-dom': 'ReactDOM',
     'react-router': 'ReactRouter'
   },
-  plugins: []
+  plugins: [
+    new webpack.DefinePlugin({
+      USE_SERVICE_WORKER: process.env.NODE_ENV === 'production'
+    })
+  ]
 }
 
 if (process.env.NODE_ENV === 'production') {
@@ -71,11 +75,11 @@ if (process.env.NODE_ENV === 'production') {
         handler: 'networkFirst'
       },
       {
-        urlPattern: /https:\/\/public-api\.wordpress\.com\/rest\/v1\.1\/sites\/ylikr\.wordpress\.com\/posts/,
+        urlPattern: /https:\/\/public-api\.wordpress\.com\/wp\/v2\/sites\/ylikr\.wordpress\.com\//,
         handler: 'networkFirst',
         options: {
           cache: {
-            name: 'posts'
+            name: 'wp'
           }
         }
       },
