@@ -1,6 +1,6 @@
 import querystring from 'querystring'
 
-const endpoint = 'https://public-api.wordpress.com/wp/v2/sites/ylikr.wordpress.com'
+const endpoint = 'https://blog.likr-lab.com/api/wp/v2/sites/ylikr.wordpress.com'
 
 export const getPost = (postId) => {
   return window.fetch(`${endpoint}/posts/${postId}`)

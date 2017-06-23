@@ -75,7 +75,7 @@ if (process.env.NODE_ENV === 'production') {
         handler: 'networkFirst'
       },
       {
-        urlPattern: /https:\/\/public-api\.wordpress\.com\/wp\/v2\/sites\/ylikr\.wordpress\.com\//,
+        urlPattern: /https:\/\/blog\.likr-lab\.com\/api\//,
         handler: 'networkFirst',
         options: {
           cache: {
