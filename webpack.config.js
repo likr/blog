@@ -49,10 +49,13 @@ if (process.env.NODE_ENV === 'production') {
       'public/bundle.js',
       'public/styles.css',
       'public/icon128.png',
+      'public/icon192.png',
+      'public/icon512.png',
       'public/manifest.json'
     ],
     stripPrefix: 'public/',
     navigateFallback: '/index.html',
+    navigateFallbackWhitelist: [/^\/posts\//],
     runtimeCaching: [
       {
         urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/pure/,
