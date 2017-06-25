@@ -55,7 +55,7 @@ if (process.env.NODE_ENV === 'production') {
     ],
     stripPrefix: 'public/',
     navigateFallback: '/index.html',
-    navigateFallbackWhitelist: [/^\/posts\//],
+    navigateFallbackWhitelist: [/^\/posts/],
     runtimeCaching: [
       {
         urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/pure/,
