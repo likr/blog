@@ -16,7 +16,7 @@ export const Head = ({subTitle}) => {
       {'property': 'og:title', 'content': title},
       {'property': 'og:type', 'content': 'blog'},
       {'property': 'og:url', 'content': url},
-      {'property': 'og:image', 'content': 'media.png'},
+      {'property': 'og:image', 'content': 'https://blog.likr-lab.com/media.png'},
       {'property': 'og:site_name', 'content': baseTitle},
       {'property': 'og:description', 'content': description}
     ]}
