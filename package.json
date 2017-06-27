@@ -4,7 +4,7 @@
   "description": "My project boilerplate for React.js",
   "scripts": {
     "deploy": "NODE_ENV=production npm run build && netlify deploy",
-    "start": "webpack-dev-server --content-base public --history-api-fallback",
+    "start": "webpack-dev-server",
     "watch": "webpack --watch",
     "build": "webpack"
   },
@@ -21,10 +21,12 @@
   "homepage": "https://github.com/likr/boilerplate-react#readme",
   "dependencies": {
     "babel-polyfill": "^6.23.0",
+    "promise-polyfill": "^6.0.2",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-helmet": "^3.3.2",
-    "react-router": "^2.8.1"
+    "react-router": "^2.8.1",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
@@ -35,7 +37,7 @@
     "netlify-cli": "^1.2.2",
     "style-loader": "^0.13.1",
     "sw-precache-webpack-plugin": "^0.11.3",
-    "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.5.0"
   }
 }

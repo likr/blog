@@ -7,34 +7,41 @@
     <meta name="theme-color" content="#3e4f5d">
     <title>likr's blog</title>
     <link rel="icon" type="image/x-icon" href="/icon128.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/pure-min.css">
+    <style>
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(61, 146, 201);
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+h3 {
+  font-weight: 100;
+}
+    </style>
     <link rel="manifest" href="/manifest.json">
     <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 ga('create', 'UA-12701994-5', 'auto');
 ga('send', 'pageview');
     </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
   </head>
   <body>
     <div id="content">
       <div>loading...</div>
       <div>This web sites requires JavaScript</div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router/2.8.1/ReactRouter.min.js"></script>
-    <script>
-      if (!window.Promise) {
-        window.Promise = ES6Promise.Promise
-      }
-      window.prerenderReady = false
-    </script>
+    <script src="/vendor.js"></script>
     <script src="/bundle.js"></script>
   </body>
 </html>
