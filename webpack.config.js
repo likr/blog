@@ -32,8 +32,7 @@ const options = {
     ]
   },
   entry: {
-    bundle: './src/index',
-    vendor: './src/vendor'
+    bundle: './src/index'
   },
   output: {
     path: path.resolve(__dirname, 'public'),
@@ -45,9 +44,6 @@ const options = {
   externals: {
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor'
-    }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')
@@ -68,7 +64,6 @@ if (process.env.NODE_ENV === 'production') {
     maximumFileSizeToCacheInBytes: 10000000,
     staticFileGlobs: [
       'public/index.html',
-      'public/vendor.js',
       'public/bundle.js',
       'public/pure-min.css',
       'public/icon128.png',
