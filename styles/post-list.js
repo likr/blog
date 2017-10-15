@@ -1,3 +1,6 @@
+import css from 'styled-jsx/css'
+
+export default css`
 .contentSubhead {
   text-transform: uppercase;
   color: #aaa;
@@ -51,3 +54,4 @@
 .pagination :global(.pure-menu) a:hover, .pagination :global(.pure-menu) a:focus {
   background: none;
 }
+`

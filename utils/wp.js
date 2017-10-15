@@ -1,18 +1,18 @@
-/* global API_ENDPOINT */
-
+import fetch from 'isomorphic-unfetch'
 import querystring from 'querystring'
 
+const API_ENDPOINT = 'https://public-api.wordpress.com/wp/v2/sites/ylikr.wordpress.com'
 const endpoint = API_ENDPOINT
 
 export const getPost = (postId) => {
-  return window.fetch(`${endpoint}/posts/${postId}`)
+  return fetch(`${endpoint}/posts/${postId}`)
     .then((response) => response.json())
     .then((post) => resolveCategories([post]))
     .then((posts) => posts[0])
 }
 
 export const getPosts = () => {
-  return window.fetch(`${endpoint}/posts/`)
+  return fetch(`${endpoint}/posts/`)
     .then((response) => response.json())
     .then((posts) => {
       return resolveCategories(posts)
@@ -25,7 +25,7 @@ const getCategoriesByIds = (...ids) => {
     per_page: ids.length,
     include: ids.join(',')
   })
-  return window.fetch(`${endpoint}/categories/?${query}`)
+  return fetch(`${endpoint}/categories/?${query}`)
     .then((response) => response.json())
 }
 

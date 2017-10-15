@@ -1,3 +1,6 @@
+import css from 'styled-jsx/css'
+
+export default css`
 .layout {
   padding: 0;
 }
@@ -92,3 +95,4 @@
     bottom: 0;
   }
 }
+`
