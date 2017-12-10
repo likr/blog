@@ -21,16 +21,22 @@
   "homepage": "https://github.com/likr/boilerplate-react#readme",
   "dependencies": {
     "babel-polyfill": "^6.23.0",
+    "history": "^4.7.2",
+    "isomorphic-fetch": "^2.2.1",
+    "jsdom": "^11.3.0",
+    "lit-html": "^0.7.1",
     "promise-polyfill": "^6.0.2",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-helmet": "^3.3.2",
     "react-router": "^2.8.1",
+    "universal-router": "^4.3.0",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "css-loader": "^0.25.0",

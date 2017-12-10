@@ -1,18 +1,16 @@
-/* global API_ENDPOINT */
+/* global fetch, URLSearchParams */
 
-import querystring from 'querystring'
-
-const endpoint = API_ENDPOINT
+const endpoint = 'https://public-api.wordpress.com/wp/v2/sites/ylikr.wordpress.com'
 
 export const getPost = (postId) => {
-  return window.fetch(`${endpoint}/posts/${postId}`)
+  return fetch(`${endpoint}/posts/${postId}`)
     .then((response) => response.json())
     .then((post) => resolveCategories([post]))
     .then((posts) => posts[0])
 }
 
 export const getPosts = () => {
-  return window.fetch(`${endpoint}/posts/`)
+  return fetch(`${endpoint}/posts/`)
     .then((response) => response.json())
     .then((posts) => {
       return resolveCategories(posts)
@@ -21,11 +19,11 @@ export const getPosts = () => {
 }
 
 const getCategoriesByIds = (...ids) => {
-  const query = querystring.stringify({
-    per_page: ids.length,
-    include: ids.join(',')
-  })
-  return window.fetch(`${endpoint}/categories/?${query}`)
+  const params = new URLSearchParams()
+  params.set('per_page', ids.length)
+  params.set('include', ids.join(','))
+  const query = params.toString()
+  return fetch(`${endpoint}/categories/?${query}`)
     .then((response) => response.json())
 }
 

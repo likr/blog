@@ -6,27 +6,14 @@ const options = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.m?js$/,
         include: [
           path.resolve(__dirname, 'src')
         ],
         use: [
           {
-            loader: 'babel-loader',
-            options: {
-              presets: ['latest', 'react']
-            }
+            loader: 'babel-loader'
           }
-        ]
-      },
-      {
-        test: /\.css$/,
-        include: [
-          path.resolve(__dirname, 'src')
-        ],
-        loaders: [
-          'style-loader',
-          'css-loader?localIdentName=[path][name]---[local]---[hash:base64:5]&modules'
         ]
       }
     ]
@@ -39,7 +26,7 @@ const options = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.mjs']
   },
   externals: {
   },
@@ -65,10 +52,9 @@ if (process.env.NODE_ENV === 'production') {
     staticFileGlobs: [
       'public/index.html',
       'public/bundle.js',
-      'public/pure-min.css',
-      'public/icon128.png',
-      'public/icon192.png',
-      'public/icon512.png',
+      'public/components/*.js',
+      'public/vendor/**/*.js',
+      'public/icon*.png',
       'public/manifest.json'
     ],
     stripPrefix: 'public/',
@@ -76,7 +62,7 @@ if (process.env.NODE_ENV === 'production') {
     navigateFallbackWhitelist: [/^\/posts/],
     runtimeCaching: [
       {
-        urlPattern: /https:\/\/blog\.likr-lab\.com\/api\//,
+        urlPattern: /https:\/\/public-api\.wordpress\.com\//,
         handler: 'fastest',
         options: {
           cache: {
