@@ -15,8 +15,10 @@
     <meta property="og:site_name" content="likr's blog">
     <meta property="og:description" content="おのうえさんのブログです。">
     <title>likr's blog</title>
+    <link rel="preload" href="/rest/v1.1/sites/ylikr.wordpress.com/posts/" as="fetch">
+    <link rel="modulepreload" href="/index.js">
     <link rel="icon" type="image/x-icon" href="/icon128.png">
-    <script async src="/bundle.js"></script>
+    <script async type="module" src="/index.js"></script>
     <script async type="module" src="/components/blog-post-item.js"></script>
     <script async type="module" src="/components/blog-post-list-page.js"></script>
     <script async type="module" src="/components/blog-post-detail-page.js"></script>

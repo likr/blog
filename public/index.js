@@ -1,6 +1,6 @@
-import './service-worker-registration'
-import {render} from './vendor/lit-html'
-import {router} from './router'
+import './service-worker-registration.js'
+import {render} from './vendor/lit-html.js'
+import {router} from './router.js'
 
 const resolve = (path) => {
   router.resolve(path.pathname).then((page) => {

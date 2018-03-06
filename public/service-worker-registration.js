@@ -1,8 +1,6 @@
-/* global USE_SERVICE_WORKER */
-
-if (USE_SERVICE_WORKER && 'serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker
-    .register('/service-worker.js')
+    .register('/sw.js')
     .then((reg) => {
       reg.onupdatefound = () => {
         const installingWorker = reg.installing

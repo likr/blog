@@ -1,6 +1,6 @@
-import UniversalRouter from 'universal-router'
-import {postList} from './pages/post-list'
-import {postDetail} from './pages/post-detail'
+import UniversalRouter from '../vendor/universal-router.js'
+import {postList} from './pages/post-list.js'
+import {postDetail} from './pages/post-detail.js'
 
 export const router = new UniversalRouter([
   {
