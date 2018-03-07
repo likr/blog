@@ -39,7 +39,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "d993fb28d68d97615e529d8c2a2c04e8"
+    "revision": "f66ad1e8240015af8b1c7027c35964dc"
   },
   {
     "url": "index.js",
@@ -59,7 +59,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "pages/post-list.js",
-    "revision": "6a735348e2e940d116d045a4c11279b0"
+    "revision": "b164c38f64b7c59f130c8397eeaf2e96"
   },
   {
     "url": "router.js",
@@ -87,6 +87,6 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "wp.js",
-    "revision": "3496a155897efb20cfdcc5789cc37229"
+    "revision": "c7cd797cb05cac6fa8e5a5b242716ba8"
   }
 ])

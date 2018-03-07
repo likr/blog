@@ -1,2 +1,2 @@
-/rest/*  https://public-api.wordpress.com/rest/:splat  200
+/simple/* https://api.graphcms.com/simple/:splat 200
 /* /index.html 200

@@ -10,8 +10,28 @@ export const getPost = (postId) => {
 }
 
 export const getPosts = () => {
-  const params = new URLSearchParams()
-  params.set('fields', 'ID,categories,excerpt,title')
-  return fetch(`${endpoint}/posts/?${params.toString()}`)
+  const query = {
+    query: `query {
+      allPosts {
+        id,
+        title,
+        content,
+        categories {
+          id,
+          name
+        }
+      }
+    }`
+  }
+  const options = {
+    method: 'POST',
+    body: JSON.stringify(query),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
+  // return fetch('https://api.graphcms.com/simple/v1/cjef06x4m1wwt0193pf1iknmx', options)
+  return fetch('/simple/v1/cjef06x4m1wwt0193pf1iknmx', options)
     .then((response) => response.json())
+    .then(({data}) => data.allPosts)
 }
