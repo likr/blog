@@ -11,7 +11,7 @@ const request = (query) => {
     }
   }
   return fetch('https://api.graphcms.com/simple/v1/cjef06x4m1wwt0193pf1iknmx', options)
-    .then((response) => response.text())
+    .then((response) => response.json())
 }
 
 const getPosts = () => {
@@ -49,15 +49,19 @@ const getPost = (id) => {
 }
 
 exports.handler = (event, context, callback) => {
-  res.set('Access-Control-Allow-Origin', '*')
-  res.set('Access-Control-Allow-Methods', 'GET, POST')
-  switch (req.query.action) {
+  // res.set('Access-Control-Allow-Origin', '*')
+  // res.set('Access-Control-Allow-Methods', 'GET, POST')
+  console.log(event)
+  switch (event.queryStringParameters.action) {
     case 'getPosts':
       getPosts()
         .then((response) => {
           callback(null, {
             statusCode: 200,
-            body: response
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(response)
           })
         })
       break
@@ -68,7 +72,7 @@ exports.handler = (event, context, callback) => {
         })
       break
     default:
-      res.status(400).send('Bad Request')
+      // res.status(400).send('Bad Request')
   }
 }
 
