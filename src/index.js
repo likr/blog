@@ -1,4 +1,4 @@
-const {router} = require('./router.js')
+import {router} from './router.js'
 
 const resolve = (path) => {
   router.resolve(path.pathname).then((page) => {

@@ -55,13 +55,13 @@ export const handler = (event, context, callback) => {
   switch (event.queryStringParameters.action) {
     case 'getPosts':
       getPosts()
-        .then((response) => {
+        .then(({data}) => {
           callback(null, {
             statusCode: 200,
             headers: {
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify(response)
+            body: JSON.stringify(data.allPosts)
           })
         })
       break

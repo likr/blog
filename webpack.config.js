@@ -34,18 +34,19 @@ const options = {
   externals: {
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      },
-      API_ENDPOINT: `'https://${process.env.NODE_ENV === 'production' ? 'blog.likr-lab.com/api' : 'public-api.wordpress.com'}/wp/v2/sites/ylikr.wordpress.com'`,
-      USE_SERVICE_WORKER: process.env.NODE_ENV === 'production'
-    })
   ],
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     historyApiFallback: true,
-    port: 8080
+    port: 8080,
+    proxy: {
+      '/.netlify/functions': {
+        target: 'http://localhost:9000',
+        pathRewrite: {
+          '^/.netlify/functions' : ''
+        }
+      }
+    }
   }
 }
 

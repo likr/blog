@@ -1,8 +1,8 @@
-const UniversalRouter = require('universal-router')
-const {postList} = require('./pages/post-list.js')
-const {postDetail} = require('./pages/post-list.js')
+import UniversalRouter from 'universal-router'
+import {postList} from './pages/post-list.js'
+import {postDetail} from './pages/post-list.js'
 
-exports.router = new UniversalRouter([
+export const router = new UniversalRouter([
   {
     path: '',
     action: () => ({redirect: '/posts'})

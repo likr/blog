@@ -1,4 +1,4 @@
-const {getPosts} = require('../wp.js')
+import {getPosts} from '../wp.js'
 
 const template = (posts) => `
 <blog-post-list-page>
@@ -24,7 +24,7 @@ ${
 </blog-post-list-page>
 `
 
-exports.postList = () => {
+export const postList = () => {
   return getPosts().then((posts) => {
     return template(posts)
   })
