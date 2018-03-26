@@ -1,3 +1,4 @@
 node_modules
+functions
 public/bundle.js
 public/service-worker.js

@@ -1,6 +1,6 @@
 /* global fetch */
 
-require('isomorphic-fetch')
+import 'isomorphic-fetch'
 
 const request = (query) => {
   const options = {
@@ -48,7 +48,7 @@ const getPost = (id) => {
   return request(query)
 }
 
-exports.handler = (event, context, callback) => {
+export const handler = (event, context, callback) => {
   // res.set('Access-Control-Allow-Origin', '*')
   // res.set('Access-Control-Allow-Methods', 'GET, POST')
   console.log(event)

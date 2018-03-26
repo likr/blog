@@ -6,7 +6,8 @@
     "deploy": "NODE_ENV=production npm run build && netlify deploy",
     "start": "webpack-dev-server",
     "watch": "webpack --watch",
-    "build": "webpack"
+    "build": "NODE_ENV=production webpack",
+    "build:lambda": "netlify-lambda build src/functions"
   },
   "repository": {
     "type": "git",
@@ -23,35 +24,21 @@
     "babel-polyfill": "^6.23.0",
     "history": "^4.7.2",
     "isomorphic-fetch": "^2.2.1",
-    "jsdom": "^11.3.0",
     "lit-html": "^0.9.0",
-    "lit-ntml": "^0.3.7",
     "promise-polyfill": "^6.0.2",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "react-helmet": "^3.3.2",
-    "react-router": "^2.8.1",
     "universal-router": "^4.3.0",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
-    "@google-cloud/functions-emulator": "^1.0.0-beta.4",
-    "babel-core": "^6.17.0",
-    "babel-loader": "^6.2.5",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-latest": "^6.16.0",
-    "babel-preset-react": "^6.16.0",
-    "css-loader": "^0.25.0",
-    "http-server": "^0.11.1",
-    "light-server": "^2.4.0",
     "netlify-cli": "^1.2.2",
     "netlify-lambda": "^1.0.0-babel-7-beta",
     "rollup": "^0.56.3",
     "rollup-plugin-commonjs": "^8.3.0",
     "rollup-plugin-node-resolve": "^3.0.3",
-    "style-loader": "^0.13.1",
-    "sw-precache-webpack-plugin": "^0.11.3",
-    "webpack": "^2.6.1",
+    "webpack": "^4.2.0",
     "webpack-dev-server": "^2.5.0",
     "workbox-cli": "^3.0.0-beta.1"
   }

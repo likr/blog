@@ -8,7 +8,8 @@ const options = {
       {
         test: /\.m?js$/,
         include: [
-          path.resolve(__dirname, 'src')
+          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'functions')
         ],
         use: [
           {
