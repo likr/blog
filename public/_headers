@@ -1,0 +1,3 @@
+/posts
+  Link: </bundle.js>; rel=preload; as=script
+  Link: </.netlify/functions/hello?action=getPosts>; rel=preload; as=fetch
