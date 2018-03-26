@@ -70,6 +70,10 @@ workbox.precaching.precacheAndRoute([
     "revision": "5a47a9f6d6d91aded0b5b8885698e9aa"
   },
   {
+    "url": "src/index.js",
+    "revision": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  {
     "url": "vendor/lib/repeat.js",
     "revision": "f4cbcb7a4a2b453fa2df5460a7ca3faa"
   },
@@ -87,6 +91,6 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "wp.js",
-    "revision": "c7cd797cb05cac6fa8e5a5b242716ba8"
+    "revision": "f421e860491018c9bfffaeffec97ee16"
   }
 ])

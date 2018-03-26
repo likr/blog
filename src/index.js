@@ -1,6 +1,4 @@
-import './service-worker-registration.js'
-import {render} from './vendor/lit-html.js'
-import {router} from './router.js'
+const {router} = require('./router.js')
 
 const resolve = (path) => {
   router.resolve(path.pathname).then((page) => {
@@ -13,7 +11,7 @@ const resolve = (path) => {
       }))
       window.history.pushState(route, '', route.pathname)
     } else {
-      render(page, document.getElementById('content'))
+      document.getElementById('content').innerHTML = page
     }
   })
 }
