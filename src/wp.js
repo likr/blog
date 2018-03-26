@@ -1,6 +1,6 @@
 /* global fetch */
 
-const endpoint = 'https://us-central1-master-ember-197106.cloudfunctions.net/requestGraphCMS'
+const endpoint = '/.netlify/functions/hello'
 
 exports.getPost = (postId) => {
   return fetch(`${endpoint}?action=getPost&postId=${postId}`)
