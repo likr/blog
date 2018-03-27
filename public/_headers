@@ -1,2 +1,4 @@
-/posts
+/*
+  Link: </vendor/pure-min.css>; rel=preload; as=style
+  Link: </vendor/grids-responsive-min.css>; rel=preload; as=style
   Link: </bundle.js>; rel=preload; as=script
