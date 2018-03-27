@@ -2,6 +2,4 @@
   Link: </vendor/pure-min.css>; rel=preload; as=style
   Link: </vendor/grids-responsive-min.css>; rel=preload; as=style
   Link: </bundle.js>; rel=preload; as=script
-  Link: </.netlify/functions/hello?action=getPosts>; rel=preload; as=fetch; crossorigin
-/bundle.js
-  Link: </.netlify/functions/hello?action=getPosts>; rel=preload; as=fetch; crossorigin
+  Link: </.netlify/functions/hello?action=getPosts>; rel=preload; type=fetch; as=fetch; crossorigin
