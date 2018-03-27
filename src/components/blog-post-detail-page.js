@@ -1,4 +1,4 @@
-import {html, render} from '../vendor/lit-html.js'
+import {html, render} from 'lit-html'
 
 const template = (element) => html`
 <div>

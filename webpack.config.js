@@ -5,10 +5,12 @@ const options = {
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.js$/,
         include: [
           path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'functions')
+        ],
+        exclude: [
+          path.resolve(__dirname, 'src', 'components'),
         ],
         use: [
           {
@@ -22,19 +24,13 @@ const options = {
     ]
   },
   entry: {
-    bundle: './src/index'
+    bundle: './src/index',
+    components: './src/components'
   },
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: '[name].js'
   },
-  resolve: {
-    extensions: ['.js', '.mjs']
-  },
-  externals: {
-  },
-  plugins: [
-  ],
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     historyApiFallback: true,
