@@ -6,6 +6,10 @@ const template = (element) => html`
   padding-bottom: 2em;
 }
 
+.post-title {
+  .overflow: hidden;
+}
+
 .post-description {
   font-family: Georgia, "Cambria", serif;
   color: #444;
